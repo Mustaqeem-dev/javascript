@@ -77,3 +77,39 @@ if (password.length >= 12 && password.includes("@")) {
 } else {
   console.log("weak");
 }
+
+//functions
+
+const introduction = function (name, age, Class) {
+  console.log(`i am ${name} ,i am  ${age} year old and i study in ${Class}`);
+};
+introduction("mustaqeem", "22", "10th");
+
+//using return to use callbacks globally out of functions
+
+const calcarea = function (radius) {
+  return 3.14 * radius ** 2;
+};
+
+const area = calcarea(5);
+console.log("area is", area);
+
+//arrow function
+const calcarea2 = (radius) => 3.14 * radius ** 2;
+const area2 = calcarea(5);
+console.log("area2 from arrow function  is", area);
+
+const greet = () => "hello world";
+const res = greet();
+console.log(res);
+
+//arrow2
+const bill = (prod, tax) => {
+  let total = 0;
+  for (let i = 0; i < prod.length; i++) {
+    total += prod[i] + prod[i] * tax;
+  }
+  return total;
+};
+
+console.log("total bill is", bill([20, 13, 23], [2.2]));
