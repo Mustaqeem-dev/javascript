@@ -103,7 +103,7 @@ const greet = () => "hello world";
 const res = greet();
 console.log(res);
 
-//arrow2
+//arrow2 function
 const bill = (prod, tax) => {
   let total = 0;
   for (let i = 0; i < prod.length; i++) {
@@ -113,3 +113,29 @@ const bill = (prod, tax) => {
 };
 
 console.log("total bill is", bill([20, 13, 23], [2.2]));
+
+//object litterals
+
+let user = {
+  name: "mustaqeem",
+  age: 22,
+  location: "g13",
+  blogs: [
+    { title: "GET TO WORK", likes: 30 },
+    { title: "what to work today", likes: 40 },
+  ],
+  login: function () {
+    console.log("i have logged in");
+  },
+  logout: function () {
+    console.log("logged out");
+  },
+
+  logblog: function () {
+    console.log("following are my blogs");
+    this.blogs.forEach((blog) => {
+      console.log(blog.title, blog.likes);
+    });
+  },
+};
+user.logblog();
